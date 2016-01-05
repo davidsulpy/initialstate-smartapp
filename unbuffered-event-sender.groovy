@@ -255,29 +255,17 @@ def genericHandler(evt) {
 	eventHandler(key, value)
 }
 
-// This is a handler function for flushing the event buffer
-// after a specified amount of time to reduce the load on ST servers
-def flushBuffer() {
-	def eventBuffer = atomicState.eventBuffer
-	log.trace "About to flush the buffer on schedule"
-	if (eventBuffer != null && eventBuffer.size() > 0) {
-		atomicState.eventBuffer = []
-		tryShipEvents(eventBuffer)
-	}
-}
-
 def eventHandler(name, value) {
 	def epoch = now() / 1000
-	def eventBuffer = []
-	eventBuffer << [key: "$name", value: "$value", epoch: "$epoch"]
 
-	tryShipEvents(eventBuffer)
+	def event = new JsonSlurper().parseText("{\"key\": \"$name\", \"value\": \"$value\", \"epoch\": \"$epoch\"}")
+
+	tryShipEvents(event)
 	
-	log.debug "Event added to buffer: " + eventBuffer
+	log.debug "Shipped Event: " + event
 }
 
-// a helper function for shipping the atomicState.eventBuffer to Initial State
-def tryShipEvents(eventBuffer) {
+def tryShipEvents(event) {
 
 	def grokerSubdomain = atomicState.grokerSubdomain
 	// can't ship events if there is no grokerSubdomain
@@ -300,7 +288,7 @@ def tryShipEvents(eventBuffer) {
 			"X-IS-AccessKey": "${accessKey}",
 			"Accept-Version": "0.0.2"
 		],
-		body: eventBuffer
+		body: event
 	]
 
 	try {
