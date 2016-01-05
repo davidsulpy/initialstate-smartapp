@@ -21,8 +21,17 @@ For the official version, you can install the SmartApp by following the SmartThi
 5. Select "From Code"
 6. Paste the code copied from the unbuffered-event-sender.groovy
 7. Select "Create"
-8. Edit line 162 and replace `YOUR_ACCESS_KEY` with an access key from your Initial State account.
+8. Edit line 162 and replace `YOUR_ACCESS_KEY` with an access key from your Initial State account. Optionally, you can edit the bucket information above this line should you wish.
 9. Select "Save"
 10. Select "Publish" -> "For Me"
 
-Now you should be able to go into your SmartApps section of your SmartThings app and configure which devices' events you want this app to listen to.
+Now switch to the SmartThings mobile app
+
+1. Go to the Marketplace
+2. Select the SmartApps tab
+3. Select My Apps
+4. Select the DIY Initial State Event Streamer
+5. Configure the sensors and capabilities you'd like to monitor
+6. Select Done
+
+You should now be all set!
