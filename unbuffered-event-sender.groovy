@@ -19,7 +19,7 @@
  */
 
 definition(
-    name: "Initial State Event Streamer",
+    name: "DIY Initial State Event Streamer",
     namespace: "initialstate.events",
     author: "David Sulpy",
     description: "A SmartThings SmartApp to allow SmartThings events to be viewable inside an Initial State Event Bucket in your https://www.initialstate.com account.",
