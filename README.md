@@ -34,4 +34,4 @@ Now switch to the SmartThings mobile app
 5. Configure the sensors and capabilities you'd like to monitor
 6. Select Done
 
-You should now be all set!
+You should now be all set! Please note, however, that events will populate the bucket automatically as new events happen on your SmartThings network. Your history of events will build from when you setup the SmartApp forward, so, if you don't see any events in your Initial State bucket immediately, it's most likely because no events have occurred just yet!
