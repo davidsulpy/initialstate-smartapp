@@ -6,13 +6,13 @@ The actual SmartApp code is inside the official [SmartThings Public](https://git
 
 Additionally, you'll find un-official or do-it-yourself SmartApps in this repo like the unbuffered Initial State Event Sender (which is based on the original design of this app and is by its very nature much less complex and therefor less fragile in the SmartThings ecosystem).
 
-##Installation
+## Installation
 
 
-###Official Version
+### Official Version
 For the official version, you can install the SmartApp by following the SmartThings button in your [Initial State Account Settings](https://www.initialstate.com/app#/account) page.
 
-###DIY Version
+### DIY Version
 
 1. Copy the code from [`unbuffered-event-sender.groovy`](https://raw.githubusercontent.com/davidsulpy/initialstate-smartapp/master/unbuffered-event-sender.groovy)
 2. Log in to ide.smartthings.com with your SmartThings account.
