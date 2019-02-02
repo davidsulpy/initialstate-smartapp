@@ -1,10 +1,10 @@
 # Initial State SmartThings SmartApp
 
-This repository is a host of the Initial State Event Sender - a SmartThings SmartApp intended to make easy the process of sending events that ocur on a SmartThings network to Initial State for visualization.
+This repository is a host of the Initial State Event Sender - a SmartThings SmartApp intended to make easy the process of sending events that occur on a SmartThings network to Initial State for visualization.
 
-The actual SmartApp code is inside the official [SmartThings Public](https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/smartapps/initialstate-events/initial-state-event-streamer.src/initial-state-event-streamer.groovy) github repo. However, because of the way SmartThings does app aproval and deployment as well as the requirement for commit squashing, I wanted to keep the code in a separate repo as well to keep the git history. This way, any change in the official github repo can just be a copy and paste commit.
+The actual SmartApp code is inside the official [SmartThings Public](https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/smartapps/initialstate-events/initial-state-event-streamer.src/initial-state-event-streamer.groovy) github repo. However, because of the way SmartThings does app approval and deployment as well as the requirement for commit squashing, I wanted to keep the code in a separate repo as well to keep the git history. This way, any change in the official github repo can just be a copy and paste commit.
 
-Additionally, you'll find un-official or do-it-yourself SmartApps in this repo like the unbuffered Initial State Event Sender (which is based on the original design of this app and is by its very nature much less complex and therefor less fragile in the SmartThings ecosystem).
+Additionally, you'll find un-official or do-it-yourself SmartApps in this repo like the unbuffered Initial State Event Sender (which is based on the original design of this app and is by its very nature much less complex and therefore less fragile in the SmartThings ecosystem).
 
 ## Installation
 
@@ -25,7 +25,7 @@ For the official version, you can install the SmartApp by following the SmartThi
 9. Select "Save"
 10. Select "Publish" -> "For Me"
 
-Now switch to the SmartThings mobile app
+Now switch to the SmartThings Classic mobile app:
 
 1. Go to the Marketplace
 2. Select the SmartApps tab
@@ -33,5 +33,7 @@ Now switch to the SmartThings mobile app
 4. Select the DIY Initial State Event Streamer
 5. Configure the sensors and capabilities you'd like to monitor
 6. Select Done
+
+NOTE: This only works on the "SmartThings Classic" app. This functionality does not currently exist on the "SmartThings (Samsung Connect)" app.
 
 You should now be all set! Please note, however, that events will populate the bucket automatically as new events happen on your SmartThings network. Your history of events will build from when you setup the SmartApp forward, so, if you don't see any events in your Initial State bucket immediately, it's most likely because no events have occurred just yet!
